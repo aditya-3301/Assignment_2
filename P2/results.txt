@@ -1,0 +1,373 @@
+OS Assignment 2 - P2 measurements
+2026-10-14T17:38:44+00:00
+Linux vm 6.18.44-fc-v114 #1 SMP PREEMPT_DYNAMIC @0 x86_64 x86_64 x86_64 GNU/Linux
+PRETTY_NAME="Ubuntu 24.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.5 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+CPU=0 priority=20
+Filesystem backing /tmp (I/O uses fsync):
+TARGET SOURCE   FSTYPE OPTIONS
+/      /dev/vda ext4   rw,relatime,discard,no_prefetch_block_bitmaps,resv_strict,resuid=65534,resgid=65534
+RT bandwidth configuration:
+kernel.sched_rt_period_us = 1000000
+kernel.sched_rt_runtime_us = 950000
+Workload source checksums:
+262ee11435cbe6eb82b3daa6e1fab72376bd21d34961c5410007c41559444296  workload_cpu.h
+1a32e178a45c57bb896e18a8ff555c45a68b94b86ac70e51049cd639eb8adade  workload_io.h
+
+===== program_a / RR / requested 1 ms =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 1 ms
+Effective RR Interval: 4.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  376              0.883        3616.740
+    1  377              1.753        3634.539
+    2  378              5.794        3619.552
+    3  379              9.791        3637.228
+    4  380             13.786        3624.348
+    5  381             17.796        3640.771
+    6  382             21.754        3639.987
+    7  383             25.773        3640.669
+Involuntary Context Switches: 887
+Voluntary Context Switches: 8
+Average Response Time: 12.166 ms
+Maximum Response Time: 25.773 ms
+Average Turnaround Time: 3631.729 ms
+Maximum Turnaround Time: 3640.771 ms
+Throughput: 2.197289 children/s
+Total Elapsed Time: 3.640851 s
+
+===== program_a / RR / requested 10 ms =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 10 ms
+Effective RR Interval: 12.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  387              1.337        3600.533
+    1  388             13.237        3664.635
+    2  389             25.271        3695.817
+    3  390             37.241        3683.646
+    4  391             49.243        3691.712
+    5  392             61.248        3694.077
+    6  393             73.234        3660.619
+    7  394             85.236        3662.601
+Involuntary Context Switches: 304
+Voluntary Context Switches: 8
+Average Response Time: 43.256 ms
+Maximum Response Time: 85.236 ms
+Average Turnaround Time: 3669.205 ms
+Maximum Turnaround Time: 3695.817 ms
+Throughput: 2.164576 children/s
+Total Elapsed Time: 3.695874 s
+
+===== program_a / RR / requested 50 ms =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 50 ms
+Effective RR Interval: 52.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  399              0.395        3428.354
+    1  400             49.863        3447.176
+    2  401            101.862        3460.643
+    3  402            153.862        3468.441
+    4  403            205.850        3475.966
+    5  404            257.872        3490.860
+    6  405            309.865        3508.227
+    7  406            361.876        3529.512
+Involuntary Context Switches: 77
+Voluntary Context Switches: 8
+Average Response Time: 180.181 ms
+Maximum Response Time: 361.876 ms
+Average Turnaround Time: 3476.147 ms
+Maximum Turnaround Time: 3529.512 ms
+Throughput: 2.266500 children/s
+Total Elapsed Time: 3.529671 s
+
+===== program_a / RR / requested 150 ms =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 150 ms
+Effective RR Interval: 152.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  411              0.507        2654.347
+    1  412            176.205        2782.253
+    2  413            328.204        2921.033
+    3  414            480.207        3055.968
+    4  415            632.207        3216.961
+    5  416            784.209        3642.618
+    6  417            940.762        3512.309
+    7  418           1108.213        3638.356
+Involuntary Context Switches: 26
+Voluntary Context Switches: 8
+Average Response Time: 556.314 ms
+Maximum Response Time: 1108.213 ms
+Average Turnaround Time: 3177.981 ms
+Maximum Turnaround Time: 3642.618 ms
+Throughput: 2.196173 children/s
+Total Elapsed Time: 3.642699 s
+
+===== program_a / RR / requested 300 ms =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 300 ms
+Effective RR Interval: 300.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  422              0.375        2649.805
+    1  423            299.275        2774.438
+    2  424            639.284        2899.497
+    3  425            939.280        3015.575
+    4  426           1239.280        3140.073
+    5  427           1587.281        3263.591
+    6  428           1887.281        3386.955
+    7  429           2187.283        3570.181
+Involuntary Context Switches: 23
+Voluntary Context Switches: 8
+Average Response Time: 1097.417 ms
+Maximum Response Time: 2187.283 ms
+Average Turnaround Time: 3087.514 ms
+Maximum Turnaround Time: 3570.181 ms
+Throughput: 2.240694 children/s
+Total Elapsed Time: 3.570323 s
+
+===== program_a / RR / requested 500 ms =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 500 ms
+Effective RR Interval: 500.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  434              0.361         430.686
+    1  435            430.845         887.221
+    2  436            887.362        1308.398
+    3  437           1308.537        1744.312
+    4  438           1744.457        2223.669
+    5  439           2223.841        2662.691
+    6  440           2662.861        3174.207
+    7  441           3174.400        3628.747
+Involuntary Context Switches: 13
+Voluntary Context Switches: 8
+Average Response Time: 1554.083 ms
+Maximum Response Time: 3174.400 ms
+Average Turnaround Time: 2007.491 ms
+Maximum Turnaround Time: 3628.747 ms
+Throughput: 2.204472 children/s
+Total Elapsed Time: 3.628988 s
+
+===== program_a / FIFO =====
+Program-A (CPU-Bound)
+Scheduling Policy: SCHED_FIFO
+Priority: 20
+Allowed CPUs: 0
+Child  PID       Response(ms)  Turnaround(ms)
+    0  444              0.542         463.043
+    1  445            463.189         886.059
+    2  446            886.195        1366.156
+    3  447           1366.352        1813.873
+    4  448           1814.048        2280.365
+    5  449           2280.528        2719.138
+    6  450           2719.277        3129.578
+    7  451           3129.757        3598.389
+Involuntary Context Switches: 13
+Voluntary Context Switches: 8
+Average Response Time: 1582.486 ms
+Maximum Response Time: 3129.757 ms
+Average Turnaround Time: 2032.075 ms
+Maximum Turnaround Time: 3598.389 ms
+Throughput: 2.223133 children/s
+Total Elapsed Time: 3.598524 s
+
+===== program_b / RR / requested 1 ms =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 1 ms
+Effective RR Interval: 4.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  455              0.941        1669.979
+    1  456              1.246        1668.982
+    2  457              1.385        1639.698
+    3  458              1.513        1640.215
+    4  459              1.618        1639.463
+    5  460              1.726        1637.186
+    6  461              1.899        1639.914
+    7  462              2.038        1638.905
+Involuntary Context Switches: 117
+Voluntary Context Switches: 61341
+Average Response Time: 1.546 ms
+Maximum Response Time: 2.038 ms
+Average Turnaround Time: 1646.793 ms
+Maximum Turnaround Time: 1669.979 ms
+Throughput: 4.790281 children/s
+Total Elapsed Time: 1.670048 s
+
+===== program_b / RR / requested 10 ms =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 10 ms
+Effective RR Interval: 12.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  467              0.649        1463.557
+    1  468              0.793        1463.151
+    2  469              0.899        1426.666
+    3  470              1.006        1426.536
+    4  471              1.141        1431.249
+    5  472              1.276        1432.483
+    6  473              1.362        1431.625
+    7  474              1.446        1430.516
+Involuntary Context Switches: 17
+Voluntary Context Switches: 61333
+Average Response Time: 1.072 ms
+Maximum Response Time: 1.446 ms
+Average Turnaround Time: 1438.223 ms
+Maximum Turnaround Time: 1463.557 ms
+Throughput: 5.465801 children/s
+Total Elapsed Time: 1.463647 s
+
+===== program_b / RR / requested 50 ms =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 50 ms
+Effective RR Interval: 52.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  478              0.350        1536.531
+    1  479              0.484        1535.940
+    2  480              0.568        1487.261
+    3  481              0.685        1500.346
+    4  482              0.772        1502.707
+    5  483              0.859        1496.340
+    6  484              0.946        1512.745
+    7  485              1.033        1514.811
+Involuntary Context Switches: 7
+Voluntary Context Switches: 61576
+Average Response Time: 0.712 ms
+Maximum Response Time: 1.033 ms
+Average Turnaround Time: 1510.835 ms
+Maximum Turnaround Time: 1536.531 ms
+Throughput: 5.206202 children/s
+Total Elapsed Time: 1.536629 s
+
+===== program_b / RR / requested 150 ms =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 150 ms
+Effective RR Interval: 152.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  489              1.799        1266.850
+    1  490              2.003        1259.419
+    2  491              2.170        1245.489
+    3  492              2.288        1265.879
+    4  493              2.415        1256.868
+    5  494              2.529        1269.640
+    6  495              2.641        1256.328
+    7  496              2.751        1270.912
+Involuntary Context Switches: 0
+Voluntary Context Switches: 63195
+Average Response Time: 2.325 ms
+Maximum Response Time: 2.751 ms
+Average Turnaround Time: 1261.423 ms
+Maximum Turnaround Time: 1270.912 ms
+Throughput: 6.294268 children/s
+Total Elapsed Time: 1.270998 s
+
+===== program_b / RR / requested 300 ms =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 300 ms
+Effective RR Interval: 300.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  500              0.538        1245.336
+    1  501              0.673        1245.976
+    2  502              0.768        1244.568
+    3  503              0.866        1240.499
+    4  504              0.968        1243.924
+    5  505              1.069        1199.845
+    6  506              1.179        1236.450
+    7  507              1.260        1244.649
+Involuntary Context Switches: 0
+Voluntary Context Switches: 62965
+Average Response Time: 0.915 ms
+Maximum Response Time: 1.260 ms
+Average Turnaround Time: 1237.656 ms
+Maximum Turnaround Time: 1245.976 ms
+Throughput: 6.419957 children/s
+Total Elapsed Time: 1.246114 s
+
+===== program_b / RR / requested 500 ms =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_RR
+Priority: 20
+Allowed CPUs: 0
+Requested Time Quantum: 500 ms
+Effective RR Interval: 500.000 ms
+Child  PID       Response(ms)  Turnaround(ms)
+    0  511              1.053        1289.431
+    1  512              1.254        1233.898
+    2  513              1.382        1286.957
+    3  514              1.504        1290.266
+    4  515              1.615        1289.102
+    5  516              1.768        1291.379
+    6  517              1.877        1287.056
+    7  518              1.982        1291.887
+Involuntary Context Switches: 0
+Voluntary Context Switches: 63046
+Average Response Time: 1.554 ms
+Maximum Response Time: 1.982 ms
+Average Turnaround Time: 1282.497 ms
+Maximum Turnaround Time: 1291.887 ms
+Throughput: 6.192188 children/s
+Total Elapsed Time: 1.291950 s
+
+===== program_b / FIFO =====
+Program-B (I/O-Bound)
+Scheduling Policy: SCHED_FIFO
+Priority: 20
+Allowed CPUs: 0
+Child  PID       Response(ms)  Turnaround(ms)
+    0  521              0.485        1363.857
+    1  522              0.619        1346.578
+    2  523              0.706        1342.110
+    3  524              0.831        1319.164
+    4  525              0.913        1348.878
+    5  526              0.991        1355.352
+    6  527              1.071        1355.452
+    7  528              1.157        1321.095
+Involuntary Context Switches: 0
+Voluntary Context Switches: 65112
+Average Response Time: 0.847 ms
+Maximum Response Time: 1.157 ms
+Average Turnaround Time: 1344.061 ms
+Maximum Turnaround Time: 1363.857 ms
+Throughput: 5.865271 children/s
+Total Elapsed Time: 1.363961 s
+COMPLETE: 14 / 14 successful measurements
